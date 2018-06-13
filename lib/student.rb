@@ -4,8 +4,8 @@ class Student
 
   @@all = []
 
-  def initialize(students)
-    students.each_pair{ |key, value| self.send(("#{key}="), value)}
+  def initialize(attributes)
+    attributes.each_pair{ |key, value| self.send(("#{key}="), value)}
     @@all << self
   end
 
